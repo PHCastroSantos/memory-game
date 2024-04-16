@@ -1,0 +1,27 @@
+{
+  "name": "memory-game",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run css && npm run build:ts",
+    "build:w": "npm-run-all --parallel css:w ts:w",
+    "css": "sass src/scss/estilo.scss dist/css/app.css --style compressed",
+    "css:w": "sass --watch src/scss/estilo.scss:dist/css/app.css --style compressed",
+    "build:ts": "tsc -p tsconfig.json",
+    "ts:w": "tsc -w -p tsconfig.json"
+  },
+  "keywords": [],
+  "author": "Daniel Tapias Morales <tapmorales@gmail.com> (tapmorales.com)",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.49.8",
+    "typescript": "^5.4.5",
+    "vite": "^2.8.0"
+  },
+  "dependencies": {
+    "core-js": "^3.3.2"
+  },
+  "description": ""
+}
